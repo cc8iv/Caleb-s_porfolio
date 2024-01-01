@@ -1,0 +1,52 @@
+.float-radial{
+    animation: bounce 1s ease-in-out alternate forwards infinite;
+}
+
+.float-radial:nth-of-type(2){
+    animation: bounce 1s ease-in-out alternate forwards infinite;
+}
+
+.hero-image-container{
+    /* animation: bounce 1s ease-in-out alternate forwards infinite; */
+
+}
+
+div.project-item:hover {
+    /* animation: imageScaleUp .8s forwards ease; */
+    background-size: 150%;
+    
+}
+
+ div.project-item:hover .project-header{
+    bottom: 0;
+    /* animation: slideToTop 1s forwards alternate ease; */
+}
+
+@keyframes bounce {
+    0%{
+        margin-top: -20px;
+    }
+    100%{
+        margin-top: initial;
+    }
+}
+
+@keyframes imageScaleUp {
+    0%{
+        background-size: 100%;
+    }
+
+    100%{
+        background-size: 150%;
+    }
+}
+
+@keyframes slideToTop {
+    0%{
+        bottom: -60%;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}

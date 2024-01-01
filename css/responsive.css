@@ -1,0 +1,117 @@
+
+@media screen and (max-width: 765px){
+    ul#menu-list{
+        display: none;
+    }
+
+    div.hamburger{
+        display: block;
+    }
+
+
+    /* hero section */
+    .hero.container{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .hero .hero-image-container{
+        width: 80%;
+        height: 400px;
+        max-width: auto;
+        /* background-size: 80%; */
+        /* height: 100vh; */
+    }
+
+    .hero-heading-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero-heading.heading{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .hero-heading.heading:nth-of-type(2){
+        flex-direction: column;
+    }
+
+    .hero-heading .position-list{
+        justify-content: center;
+        width: 450px;
+    }
+
+    div.slider{
+        align-items: center;
+    }
+    /* hero section end */
+    
+    
+    /* about section */
+    .about-sub-container{
+        flex-direction: column;
+    }
+
+    .about-sub-container.me-info .image-container{
+        top: -35%;
+        left: 50%;
+        width: 150px;
+        height: 150px;
+        transform: translateX(-50%);
+    }
+
+    .me-info .card-container{
+        margin-top: 50px;
+    }
+
+    .card-container .btn-grp{
+        width: 100%;
+    }
+
+    .skills-holder{
+        flex-direction: column;
+    }
+
+    .skills .card-container{
+        /* position: absolute; */
+        width: 40vw;
+        height: 40vw;
+    }
+    /* about section end */
+    
+    /* project section */
+    .projects-holder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px 50px;
+        flex-wrap: wrap;
+    
+    }
+
+    .project-item{
+        width: 100%;
+
+    }
+    /* project section end */
+    
+    /* contact section */
+    .contact-holder{
+        flex-direction: column;
+    }
+
+    .contact-holder>div{
+        width: 100%;
+    }
+    /* contact section end */
+}
