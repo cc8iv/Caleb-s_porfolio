@@ -25,8 +25,8 @@
 body{
     font-family:sans-serif;
     /* font-size: ; */
-    background-color: var(--def-color-2);
-    color: var(--def-color-1);
+    background-color: var(--def-color-1);
+    color: var(--def-color-2);
 }
 
 img{
@@ -145,6 +145,7 @@ span.logo a {
 
 div.hamburger{
     display: none;
+    font-size: 120%;
 }
 
 ul#menu-list{
@@ -224,6 +225,7 @@ ul#menu-list a:focus{
     align-items: center;
     padding: 100px 10%;
     background: linear-gradient(20deg, #222222, #272727);
+    color: #fff;
 }
 
 .hero .hero-image-container{
@@ -232,7 +234,7 @@ ul#menu-list a:focus{
     max-width: 400px;
     height: 100vh;
     /* transform: skewY('180deg'); */
-    background: url("../media/images/MESELF.png"), linear-gradient(30deg, var(--primary-color-2), var(--primary-color-1));
+    background: url("../media/images/MESELF.png"), linear-gradient(30deg, #ffffff57, #ffffff);
     background-size: cover;
     background-position: center 0%;
     background-repeat: no-repeat;
@@ -296,7 +298,7 @@ div.slider{
     height: 100px;
     border-radius: 100%;
     /* background-image: url("../media/images/MESELF.png"); */
-    background-color: radial-gradient(rgba(1, 162, 255, 0.103), #008cff2a);
+    background: linear-gradient(45deg, rgba(1, 162, 255, 0.5), #008cff42);
     z-index: 1;
     backdrop-filter: blur(45px);
 }
@@ -309,7 +311,7 @@ div.slider{
 .float-radial:nth-of-type(2){
     top: 90%;
     right: -10%;
-    background: radial-gradient(rgba(251, 255, 1, 0.103), #ffc4002a);
+    background: radial-gradient(rgba(251, 255, 1, 0.295), #ffc4002a);
 }
 /* floating radial circles */
 
@@ -366,6 +368,8 @@ div.slider{
     justify-content: center;
     align-items: start;
     flex-direction: column;
+    background-color: var(--def-color-2);
+    color: var(--def-color-1);
     border: 1px solid #999999;
     /* box-shadow: 0 0 8px -4px #999999; */
     border-radius: var(--max-border-radius);
@@ -379,6 +383,11 @@ div.slider{
 
 .card-container .btn-grp{
     width: 70%;
+}
+
+.card-container button:nth-of-type(odd){
+    /* background-color: var(--def-color-2); */
+    /* color: var(--def-color-1); */
 }
 
 .card-container button:nth-of-type(even){
@@ -395,11 +404,31 @@ div.slider{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url();
-    background-color: #d4d4d4;
+    flex-direction: column;
+    /* background: url(); */
+    /* background-color: #d4d4d4; */
     width: 18vw;
     height: 18vw;
     border-radius: var(--max-border-radius);
+    gap: 20px;
+    font-size: 1.23rem;
+}
+
+.skills .card-container img{
+    width: 30%;
+}
+
+.skills .card-container span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px 40px;
+    font-size: 80%;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .skills .skills-holder{
@@ -459,8 +488,18 @@ div.slider{
     border-radius: var(--max-border-radius);
     overflow: hidden;
     transition: all .8s ease;
+    z-index: 1;
 }
-/* ============== project section end ============== */
+
+.project-item::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #44444457;
+    z-index: 2;
+    overflow: hidden;
+}
 
 .project-item-image{
     position: absolute;
@@ -470,10 +509,12 @@ div.slider{
     width: 100%;
     height: 100%;
     z-index: 1;
+    transition: all .8s ease;
 }
 
 .project-item-image img{
     width: 100%;
+    /* aspect-ratio: 3/3; */
 }
 
 .project-header{
@@ -486,17 +527,24 @@ div.slider{
     flex-direction: column;
     gap: 10px;
     padding: 10px 15px;
-    background-color: #18181886;
-    color: #fff;
+    background-color: #2222225e;
+    color: #ffffff;
     bottom: -60%;
     transition: all .8s ease;
-    z-index: 2;
+    z-index: 3;
+    overflow: hidden;
 }
 
 .project-header a{
-    color: #fff;
-    font-size: 2.7rem;
+    color: #ffffff;
+    font-size: 200%;
 }
+
+.project-header span{
+    /* color: #ffffff; */
+    font-size: 80%;
+}
+/* ============== project section end ============== */
 
 /* ============== contact section ============== */
 .contact.container{
@@ -504,6 +552,7 @@ div.slider{
     justify-content: center;
     align-items: center;
     /* flex-direction: column; */
+    background-color: var(--def-color-2);
     width: 100%;
 }
 
@@ -528,6 +577,7 @@ div.slider{
     backdrop-filter: blur(20px);
     padding: 40px;
     gap: 20px;
+    color: var(--def-color-1);
 }
 
 .contact-header-holder .header{
@@ -574,7 +624,17 @@ div.contact-details>div>span, .socials a{
     color: var(--def-color-2);
 }
 
+.socials span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
+.socials a img{
+    width: 50%;
+}
 
 
 .contact-form-holder{
@@ -614,21 +674,23 @@ input{
     outline: none;
     padding: 20px;
     /* transition: none; */
+    background-color: #ffffff;
+    backdrop-filter: blur(35px);
 }
 
-input{
-    background-color: #ffffff54;
-    backdrop-filter: blur(35px);
-    
-}
+
 
 .contact-form button{
     padding: 15px 20px;
+    background-color: var(--def-color-2);
+    color: var(--def-color-1);
 }
 
 input:focus{
-    transition: none;
-    border: 1px solid var(--primary-color-1);
+    /* transition: none; */
+    box-shadow: 0 0 8px -2px var(--primary-color-1);
+    border: none;
+    /* border: 1px solid var(--primary-color-1); */
 }
 
 /* ============== contact section end ============== */
@@ -639,8 +701,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     padding: 20px 10% 50px;
+    gap: 25px;
+    background-color: var(--def-color-2);
+    /* color: var(--def-color-1); */
 }
 
 .socials{
@@ -658,5 +724,9 @@ footer{
     background-color: #000000ab;
     color: var(--def-color-1);
     backdrop-filter: blur(25px);
+}
+
+.special.brand {
+    color: #ffffff;
 }
 /* ============== footer section end ============== */

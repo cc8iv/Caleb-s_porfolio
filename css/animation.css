@@ -11,9 +11,9 @@
 
 }
 
-div.project-item:hover {
+div.project-item:hover .project-item-image {
     /* animation: imageScaleUp .8s forwards ease; */
-    background-size: 150%;
+    width: 125%;
     
 }
 
@@ -21,6 +21,56 @@ div.project-item:hover {
     bottom: 0;
     /* animation: slideToTop 1s forwards alternate ease; */
 }
+
+/* ======= navbar animation ======= */
+/* for dropdown */
+@keyframes drop {
+    0%{
+        top: 0%;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.1;
+    }
+    100%{
+        top: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes takeup {
+    0%{
+        top: 100%;
+        opacity: 1;
+    }
+    
+    100%{
+        top: 0%;
+        opacity: 0;
+    }
+}
+/* for dropdown */
+
+/* for hamburger icon flip */
+
+div.hamburger{
+    transition: all .3s ease-in-out;
+    transform: rotate(0);
+}
+
+div.hamburger:active{
+    opacity: 0;
+    transform: rotate(360deg) scale(2);
+}
+
+@keyframes iconflip {
+    0%{
+    }
+    100%{
+    }
+}
+/* for hamburger icon flip */
+
 
 @keyframes bounce {
     0%{
